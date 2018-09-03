@@ -1,0 +1,29 @@
+{
+    "name": "abdyfranco/micro-nano",
+    "description": "A very simple, light, small and useless database-less MVC framework for PHP.",
+    "keywords": ["framework", "php", "mvc"],
+    "type": "project",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdy Franco",
+            "email": "yosoy@abdyfran.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Micro\\": "/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "vendor-dir": "Vendors",
+        "optimize-autoloader": true
+    }
+}
