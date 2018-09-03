@@ -2,9 +2,8 @@
 
 namespace Micro\Core;
 
-use Exception;
-
-class Command {
+class Command
+{
     private $text;
 
     protected function isCli()
@@ -15,14 +14,14 @@ class Command {
     protected function color($text, $color = 'default')
     {
         $colors = [
-            'black' => 30,
-            'blue' => 34,
-            'green' => 32,
-            'cyan' => 36,
-            'red' => 31,
+            'black'  => 30,
+            'blue'   => 34,
+            'green'  => 32,
+            'cyan'   => 36,
+            'red'    => 31,
             'purple' => 35,
-            'brown' => 33,
-            'gray' => 37
+            'brown'  => 33,
+            'gray'   => 37
         ];
 
         if (array_key_exists($color, $colors)) {

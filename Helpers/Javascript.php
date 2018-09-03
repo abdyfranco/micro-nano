@@ -2,8 +2,9 @@
 
 namespace Micro\Helper;
 
-class Javascript extends Html {
-    private $js_files = [];
+class Javascript extends Html
+{
+    private $js_files  = [];
     private $js_inline = [];
     private $default_path;
 
@@ -14,7 +15,7 @@ class Javascript extends Html {
 
     public function setDefaultPath($default_path)
     {
-        $temp = $this->default_path;
+        $temp               = $this->default_path;
         $this->default_path = $default_path;
 
         return $temp;
@@ -53,9 +54,9 @@ class Javascript extends Html {
         }
 
         $this->js_files[$location][] = [
-            'file' => $path . $file,
+            'file'      => $path . $file,
             'condition' => $condition,
-            'hidden' => $hidden
+            'hidden'    => $hidden
         ];
 
         return $this;
@@ -64,9 +65,9 @@ class Javascript extends Html {
     public function setInline($data, $condition = null, $hidden = true)
     {
         $this->js_inline[] = [
-            'data' => $data,
+            'data'      => $data,
             'condition' => $condition,
-            'hidden' => $hidden
+            'hidden'    => $hidden
         ];
 
         return $this;

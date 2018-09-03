@@ -2,7 +2,8 @@
 
 namespace Micro\Helper;
 
-class Arrayment {
+class Arrayment
+{
     public static function first(array $array)
     {
         if (is_array($array)) {

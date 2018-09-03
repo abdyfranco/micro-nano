@@ -2,12 +2,13 @@
 
 namespace Micro\Helper;
 
-class Text {
+class Text
+{
     public function camelCase($text)
     {
         $result = '';
-        $text = $this->snakeCase($text);
-        $text = explode('_', $text);
+        $text   = $this->snakeCase($text);
+        $text   = explode('_', $text);
 
         foreach ($text as $word) {
             $result .= ucfirst($word);
@@ -88,7 +89,7 @@ class Text {
         foreach ($words as $word) {
             $text = str_replace($word, $replacement, $text);
         }
-        
+
         return $text;
     }
 }

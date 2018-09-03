@@ -2,13 +2,14 @@
 
 namespace Micro\Helper;
 
-class Xml {
-    public $tab = "\t";
+class Xml
+{
+    public $tab       = "\t";
     public $root_node = 'result';
 
     public function xmlEntities($str)
     {
-        static $search_chars = [];
+        static $search_chars  = [];
         static $replace_chars = [];
 
         if (empty($search_chars)) {
@@ -26,7 +27,7 @@ class Xml {
                 }
             }
 
-            $search_chars = array_merge(['&', '<', '>', '"', '`'], $search_chars);
+            $search_chars  = array_merge(['&', '<', '>', '"', '`'], $search_chars);
             $replace_chars = array_merge(['&amp;', '&lt;', '&gt;', '&quot;', '&apos;'], $replace_chars);
         }
 

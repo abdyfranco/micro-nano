@@ -4,7 +4,8 @@ namespace Micro\Component;
 
 use Exception;
 
-class Password {
+class Password
+{
     protected function __construct()
     {
         // Nothing to do
