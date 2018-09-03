@@ -1,0 +1,1 @@
+<h1>Welcome to the PHP Micro Nano Framework</h1>
