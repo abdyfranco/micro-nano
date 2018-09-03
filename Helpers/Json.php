@@ -4,7 +4,8 @@ namespace Micro\Helper;
 
 use Exception;
 
-class Json {
+class Json
+{
     private $json = '';
 
     public function jsonEncode($object)

@@ -4,8 +4,9 @@ namespace Micro\Component;
 
 use Exception;
 
-class Encryption {
-    private $key = '';
+class Encryption
+{
+    private $key       = '';
     private $algorithm = 'AES-128-CBC';
 
     public function __construct($key = null)
@@ -49,9 +50,9 @@ class Encryption {
 
         // Build an array with the encrypted data
         $result = json_encode([
-            'iv' => base64_encode($iv),
-            'mac' => $mac,
-            'data' => $data,
+            'iv'        => base64_encode($iv),
+            'mac'       => $mac,
+            'data'      => $data,
             'serialize' => $serialize
         ]);
 
@@ -135,7 +136,7 @@ class Encryption {
 
     public function supportedKey($key, $algorithm)
     {
-        $key = hex2bin($key);
+        $key    = hex2bin($key);
         $length = mb_strlen($key, '8bit');
 
         return ($algorithm === 'AES-128-CBC' && $length === 16) || ($algorithm === 'AES-256-CBC' && $length === 32);

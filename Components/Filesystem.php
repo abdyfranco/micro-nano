@@ -5,7 +5,8 @@ namespace Micro\Component;
 use Exception;
 use Micro\Helper\Arrayment;
 
-class Filesystem {
+class Filesystem
+{
     public function readFile($file)
     {
         try {
@@ -46,13 +47,13 @@ class Filesystem {
     {
         if (file_exists($file)) {
             $fileinfo = [
-                'name' => basename($file),
-                'path' => $file,
-                'size' => filesize($file),
-                'date' => filemtime($file),
-                'readable' => is_readable($file),
+                'name'       => basename($file),
+                'path'       => $file,
+                'size'       => filesize($file),
+                'date'       => filemtime($file),
+                'readable'   => is_readable($file),
                 'executable' => is_executable($file),
-                'fileperms' => fileperms($file)
+                'fileperms'  => fileperms($file)
             ];
 
             return $fileinfo;
@@ -82,14 +83,14 @@ class Filesystem {
                         $content[$key] = [$entry => $this->readDir($path, true)];
                     } elseif (is_dir($path) && $recursive && $flat) {
                         $content[$path] = $path;
-                        $content[$key] = [$entry => $this->readDir($path, true)];
+                        $content[$key]  = [$entry => $this->readDir($path, true)];
                     }
                 }
             }
 
             if ($flat) {
                 $arrayment = new Arrayment();
-                $content = $arrayment->collapse($content, true);
+                $content   = $arrayment->collapse($content, true);
             }
 
             return $content;

@@ -2,7 +2,8 @@
 
 namespace Micro\Component;
 
-class Hashing {
+class Hashing
+{
     private $data = '';
 
     public static function hmacHash($algorithm, $data, $key, $raw = false, $file = false)
@@ -49,7 +50,7 @@ class Hashing {
 
     public function finish()
     {
-        $hash = hash_final($this->data);
+        $hash       = hash_final($this->data);
         $this->data = null;
 
         return $hash;
