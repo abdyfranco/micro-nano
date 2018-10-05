@@ -25,7 +25,7 @@ available at your fingertips!
 Supposedly it's an object-oriented framework with Model-View-Controller pattern,
 but it can be anything you want! (Or whatever he wants, according to his mood) 
 
-## Is this framework really usless?
+## Is this framework really useless?
 Probably not! This framework can be very useful for testing PHP classes, or
 prototyping dynamic websites quickly that do not require a complex and heavy
 framework (or a database). Although we don't really know the truth, it may or may
