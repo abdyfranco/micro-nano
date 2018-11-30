@@ -39,7 +39,7 @@ class Router
 
     public static function getView()
     {
-        $uri = str_replace(WEBDIR, '', $_SERVER['REQUEST_URI']);
+        $uri  = str_replace(WEBDIR, '', $_SERVER['REQUEST_URI']);
         $view = str_replace('/', '_', $uri);
 
         return !empty($view) ? $view : 'index';
