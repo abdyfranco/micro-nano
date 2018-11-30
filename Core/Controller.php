@@ -7,6 +7,7 @@ use Micro\Helper\Text as Text;
 
 class Controller
 {
+    protected $language;
     protected $view;
     protected $view_dir;
     protected $web_dir;
@@ -16,6 +17,9 @@ class Controller
 
     public function __construct()
     {
+        // Initialize language object
+        $this->language = new Language();
+
         $this->view     = Router::getView();
         $this->view_dir = Router::getViewDir();
         $this->web_dir  = Router::getWebDir();

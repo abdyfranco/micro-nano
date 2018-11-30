@@ -8,6 +8,14 @@ use Micro\Helper\Text as Text;
 
 class Model
 {
+    protected $language;
+
+    public function __construct()
+    {
+        // Initialize language object
+        $this->language = new Language();
+    }
+
     protected function createTable($name)
     {
         // Load helpers

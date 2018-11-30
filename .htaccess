@@ -4,3 +4,13 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php
+
+# Block direct access to json files
+<Files ~ "\.(db)$">
+   order deny,allow
+   deny from all
+</Files>
+
+# Force HTTPS
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=307,NE,L]

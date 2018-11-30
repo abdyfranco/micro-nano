@@ -23,7 +23,7 @@ class Router
 
     public static function getController()
     {
-        $uri = trim($_SERVER['REQUEST_URI'], WEBDIR);
+        $uri = str_replace(WEBDIR, '', $_SERVER['REQUEST_URI']);
         $get = explode('/', $uri);
 
         return !empty($get[0]) ? $get[0] : 'index';
@@ -31,7 +31,7 @@ class Router
 
     public static function getControllerFunction()
     {
-        $uri = trim($_SERVER['REQUEST_URI'], WEBDIR);
+        $uri = str_replace(WEBDIR, '', $_SERVER['REQUEST_URI']);
         $get = explode('/', $uri);
 
         return !empty($get[1]) ? $get[1] : 'index';
@@ -39,7 +39,7 @@ class Router
 
     public static function getView()
     {
-        $uri  = trim($_SERVER['REQUEST_URI'], WEBDIR);
+        $uri = str_replace(WEBDIR, '', $_SERVER['REQUEST_URI']);
         $view = str_replace('/', '_', $uri);
 
         return !empty($view) ? $view : 'index';

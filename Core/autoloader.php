@@ -5,6 +5,7 @@ $mapping = [
     'Micro\Core\Model'           => COREDIR . 'Model.php',
     'Micro\Core\Router'          => COREDIR . 'Router.php',
     'Micro\Core\Command'         => COREDIR . 'Command.php',
+    'Micro\Core\Language'        => COREDIR . 'Language.php',
     'Micro\Core\App'             => COREDIR . 'App.php',
     'Micro\Helper\Arrayment'     => HELPERSDIR . 'Arrayment.php',
     'Micro\Helper\Html'          => HELPERSDIR . 'Html.php',

@@ -38,32 +38,37 @@ define('COREDIR', ROOTWEBDIR . 'Core' . DS);
 define('MODELSDIR', ROOTWEBDIR . 'Models' . DS);
 
 /*
- * Absolute path to the controllers directory, where all models are stored.
+ * Absolute path to the controllers directory, where all controllers are stored.
  */
 define('CONTROLLERSDIR', ROOTWEBDIR . 'Controllers' . DS);
 
 /*
- * Absolute path to the commands directory, where all models are stored.
+ * Absolute path to the commands directory, where all commands are stored.
  */
 define('COMMANDSDIR', ROOTWEBDIR . 'Commands' . DS);
 
 /*
- * Absolute path to the components directory, where all models are stored.
+ * Absolute path to the components directory, where all components are stored.
  */
 define('COMPONENTSDIR', ROOTWEBDIR . 'Components' . DS);
 
 /*
- * Absolute path to the helpers directory, where all models are stored.
+ * Absolute path to the helpers directory, where all helpers are stored.
  */
 define('HELPERSDIR', ROOTWEBDIR . 'Helpers' . DS);
 
 /*
- * Absolute path to the views directory, where all models are stored.
+ * Absolute path to the views directory, where all views are stored.
  */
 define('VIEWSDIR', ROOTWEBDIR . 'Views' . DS);
 
 /*
- * Absolute path to the database directory, where all models are stored.
+ * Absolute path to the languages directory, where all languages are stored.
+ */
+define('LANGUAGESDIR', ROOTWEBDIR . 'Languages' . DS);
+
+/*
+ * Absolute path to the database directory, where all tables are stored.
  */
 define('DATABASEDIR', ROOTWEBDIR . 'Database' . DS);
 
