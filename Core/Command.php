@@ -33,7 +33,7 @@ class Command
         return $this;
     }
 
-    protected function print($text = null)
+    protected function printConsole($text = null)
     {
         if (empty($text)) {
             $text = $this->text;
@@ -49,7 +49,17 @@ class Command
         if ($bypass) {
             passthru($command, $output);
         } else {
-            exec($command, $output);
+            if (function_exists('shell_exec')) {
+                $output = shell_exec($command) ;
+            } else if (function_exists('exec')) {
+                exec($command, $output, $return_var);
+                $output = implode("n" , $output);
+            } else if (function_exists('system')) {
+                ob_start();
+                system($command, $return_var);
+                $output = ob_get_contents();
+                ob_end_clean();
+            }
         }
 
         return $output;
