@@ -50,11 +50,11 @@ class Command
             passthru($command, $output);
         } else {
             if (function_exists('shell_exec')) {
-                $output = shell_exec($command) ;
-            } else if (function_exists('exec')) {
+                $output = shell_exec($command);
+            } elseif (function_exists('exec')) {
                 exec($command, $output, $return_var);
-                $output = implode("n" , $output);
-            } else if (function_exists('system')) {
+                $output = implode('n', $output);
+            } elseif (function_exists('system')) {
                 ob_start();
                 system($command, $return_var);
                 $output = ob_get_contents();
